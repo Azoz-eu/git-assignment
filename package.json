@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "prepare": "husky",
+    "start:staging": "cross-env NODE_ENV=staging node src/server.js",
+    "start:preprod": "cross-env NODE_ENV=preprod node src/server.js",
+    "start:prod": "cross-env NODE_ENV=prod node src/server.js"
   },
   "keywords": [],
   "author": "",

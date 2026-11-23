@@ -1,5 +1,5 @@
 import { config } from './config/env.js';
+import { connectDB } from './db/mongoose.js';
 
-console.log(`Environment: ${config.env}`);
-console.log(`Port: ${config.port}`);
-console.log(`Mongo URI: ${config.mongoUri}`);
+await connectDB();
+console.log(`Server running in ${config.env} mode on port ${config.port}`);
